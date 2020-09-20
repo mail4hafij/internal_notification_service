@@ -12,7 +12,7 @@ https://docs.microsoft.com/en-us/dotnet/standard/containerized-lifecycle-archite
 
 
 
-1. Checkout the https://github.com/mail4hafij/rabbit_event_stream and run.
+1. Checkout the repository https://github.com/mail4hafij/rabbit_event_stream and run.
 2. Open internal_notification_service solution in Visual Studio (in order to start fresh, delete the .vs folder and make sure the docker host is running when opening the solution. 
 Then set docker-compose as startup project which will spin up the container). Hit the run button.
 3. Go to the rabbit_event_stream/scenarios and run 'dummy_events.js'
