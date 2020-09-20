@@ -1,0 +1,18 @@
+FROM microsoft/aspnetcore-build:2.0
+ARG BUILD_CONFIGURATION=Debug
+ENV ASPNETCORE_ENVIRONMENT=Development
+ENV ASPNETCORE_URLS=http://+:80
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
+EXPOSE 80
+
+WORKDIR /src
+COPY ["src/src.csproj", "src/"]
+
+RUN dotnet restore "src/src.csproj"
+COPY . .
+WORKDIR "/src/src"
+RUN dotnet build --no-restore "src.csproj" -c $BUILD_CONFIGURATION
+
+RUN echo "exec dotnet run --no-build --no-launch-profile -c $BUILD_CONFIGURATION --" > /entrypoint.sh
+
+ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]

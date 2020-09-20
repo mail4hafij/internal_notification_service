@@ -1,0 +1,15 @@
+{
+  "notifiers": {
+    "email": {
+      "type": "email",
+      "sender": "dev@org.com",
+      "recipients": "youremail1@org.com,youremail2@org.com",
+      "api_key": "send_grid_key"
+    },
+    "slack": {
+      "type": "slack",
+      "channel": "#Some_Slack_Channel",
+      "url": "http://some_slcack_channel_url"
+    }
+  }
+}

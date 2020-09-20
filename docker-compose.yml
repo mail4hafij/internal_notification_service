@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  src:
+    build:
+      context: .
+      dockerfile: src/Dockerfile
+    environment:
+      - ENVIRONMENT_MODE=dev
+networks:
+  default:
+    external:
+      # Connecting to the same network where rabbitMQ is running (Checkout the rabbit_event_stream project https://github.com/mail4hafij/rabbit_event_stream)
+      name: rabbit_event_stream
+volumes:
+  logs:
