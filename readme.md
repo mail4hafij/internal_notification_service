@@ -8,7 +8,7 @@ This project can be debugged in Visual Studio given you have the docker support 
 https://docs.microsoft.com/en-us/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker
 
 1. src/Dockerfile - It builds the src.
-2. docker-compose.yml - It builds the servcie in 'dev' mode in the same network as rabbit_event_stream
+2. docker-compose.yml - It builds the service in 'dev' mode in the same network as rabbit_event_stream
 
 
 
