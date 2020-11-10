@@ -1,4 +1,4 @@
-# Internal notification service RabbitMQ, Sendgrid, Slack.
+# Internal notification service - RabbitMQ, Sendgrid, Slack.
 The idea here is to consume events from RabbitMQ and send email via Sendgrid or add messages to Slack channel. Let's say, there are some business critical situations, when they occure, some events are triggered to a web endpoint. Those events are then stored in RabbitMQ (covered in my other repository, please check here https://github.com/mail4hafij/rabbit_event_stream). Now, in this solution we want to consume those events from RabbitMQ so that we can notify people by email and send messages in Slack channel. 
 
 Techonology stack: Docker-compose, .Net core 2.0, C#, RabbitMQ client.
@@ -8,7 +8,7 @@ This project can be debugged in Visual Studio given you have the docker support 
 https://docs.microsoft.com/en-us/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker
 
 1. src/Dockerfile - It builds the src.
-2. docker-compose.yml - It builds the servcie in 'dev' mode in the same network as rabbit_event_stream
+2. docker-compose.yml - It builds the service in 'dev' mode in the same network as rabbit_event_stream
 
 
 
