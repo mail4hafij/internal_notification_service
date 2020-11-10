@@ -18,7 +18,7 @@ namespace src.sender.Slack
                 return;
             }
 
-            var url = new Uri(settings.Get("url") ?? "https://hooks.slack.com/services/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");
+            var url = new Uri(settings.Get("url") ?? "https://hooks.slack.com/services/bla_bla_bla");
             var channel = settings.Get("channel") ?? "#poc";
 
             
@@ -35,7 +35,7 @@ namespace src.sender.Slack
             dynamic payload = new
             {
                 channel,
-                username = "RT-internal-control",
+                username = "Notification-Service",
                 attachments = new[]
                 {
                     new
