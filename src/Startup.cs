@@ -27,7 +27,7 @@ namespace src
             applicationLifetime.ApplicationStopping.Register(OnShutdown);
             app.UseMvc();
 
-            if (Infokeeper.GetEnvironmentMode() == "develop")
+            if (Infokeeper.GetEnvironmentMode() == "dev")
             {
                 loggerFactory.AddDebug();
             }

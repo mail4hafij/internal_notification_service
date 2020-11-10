@@ -6,6 +6,9 @@ services:
       context: .
       dockerfile: src/Dockerfile
     environment:
+      - RABBITMQ_HOSTNAME=rabbit
+      - RABBITMQ_USER=esuser
+      - RABBITMQ_PASS=espassword
       - ENVIRONMENT_MODE=dev
 networks:
   default:
