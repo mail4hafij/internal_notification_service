@@ -1,9 +1,7 @@
 using System;
 using System.Text;
-using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using src.models;
 
 namespace src
 {
@@ -20,9 +18,9 @@ namespace src
         }
         public void StartListening()
         {
-            var rabbitHost = Environment.GetEnvironmentVariable("RABBITMQ_HOSTNAME") ?? "rabbit";
-            var rabbitUser = Environment.GetEnvironmentVariable("RABBITMQ_USER") ?? "guest";
-            var rabbitPassword = Environment.GetEnvironmentVariable("RABBITMQ_PASS") ?? "guest";
+            var rabbitHost = Environment.GetEnvironmentVariable("RABBITMQ_HOST") ?? "rabbit";
+            var rabbitUser = Environment.GetEnvironmentVariable("RABBITMQ_USER") ?? "admin";
+            var rabbitPassword = Environment.GetEnvironmentVariable("RABBITMQ_PASS") ?? "admin";
             var environmentMode = Environment.GetEnvironmentVariable("ENVIRONMENT_MODE") ?? "dev";
 
             // Factory
