@@ -21,8 +21,8 @@ namespace src
         public void StartListening()
         {
             var rabbitHost = Environment.GetEnvironmentVariable("RABBITMQ_HOSTNAME") ?? "rabbit";
-            var rabbitUser = Environment.GetEnvironmentVariable("RABBITMQ_USER") ?? "esuser";
-            var rabbitPassword = Environment.GetEnvironmentVariable("RABBITMQ_PASS") ?? "espassword";
+            var rabbitUser = Environment.GetEnvironmentVariable("RABBITMQ_USER") ?? "guest";
+            var rabbitPassword = Environment.GetEnvironmentVariable("RABBITMQ_PASS") ?? "guest";
             var environmentMode = Environment.GetEnvironmentVariable("ENVIRONMENT_MODE") ?? "dev";
 
             // Factory
