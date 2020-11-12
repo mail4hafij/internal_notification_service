@@ -17,11 +17,11 @@ https://docs.microsoft.com/en-us/dotnet/standard/containerized-lifecycle-archite
 
 or if you don't want to use docker-compose then  
 
-2(a). First build it from the docker file (Dockerfile.local): 
+  2(i). First build it from the docker file (Dockerfile.local)
   
   ``` docker build -f Dockerfile.local . -t notification_service_src ```  
 
-2(b). Then run it with the following mentioned paremeters. This will attach the container to the rabbit_event_stream network:
+  2(ii). Then run it with the following mentioned paremeters. This will attach the container to the rabbit_event_stream network
   
   ``` docker run --name any_name_container --network=rabbit_event_stream notification_service_src ``` 
 
