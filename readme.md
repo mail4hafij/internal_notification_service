@@ -8,6 +8,7 @@ This project can be debugged in Visual Studio given you have the docker support 
 https://docs.microsoft.com/en-us/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker
 
 1. Checkout the repository https://github.com/mail4hafij/rabbit_event_stream and run.
+  
   ``` docker-compose up --build ```
 
 2. Start the service (notification_service) with docker-compose. This will attach the container to the rabbit_event_stream network. 
