@@ -7,7 +7,7 @@ How to run locally:
 This project can be debugged in Visual Studio given you have the docker support enabled. 
 https://docs.microsoft.com/en-us/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker
 
-  1. Checkout the repository https://github.com/mail4hafij/rabbit_event_stream and run.
+  1. Checkout the repository https://github.com/mail4hafij/rabbit_event_stream and deploy rabbit_event_stream using docker-compose.
   
   ``` docker-compose up --build ```
 
