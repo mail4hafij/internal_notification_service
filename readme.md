@@ -15,7 +15,7 @@ https://docs.microsoft.com/en-us/dotnet/standard/containerized-lifecycle-archite
 
   ``` docker-compose up --build ```   
 
-or if you don't want to use docker-compose then:  
+or if you don't want to use docker-compose then  
 
 2(a). First build it from the docker file (Dockerfile.local): 
   
