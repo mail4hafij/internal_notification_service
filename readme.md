@@ -11,7 +11,7 @@ https://docs.microsoft.com/en-us/dotnet/standard/containerized-lifecycle-archite
   
   ``` docker-compose up --build ```
 
-  2. Start the service (notification_service) with docker-compose. This will attach the container to the rabbit_event_stream network. 
+  2. Deploy notificaiton_service similarly with docker-compose. This will attach the container to the rabbit_event_stream network. 
 
   ``` docker-compose up --build ```   
 
