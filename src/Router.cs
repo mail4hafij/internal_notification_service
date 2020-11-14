@@ -26,7 +26,7 @@ namespace src
                 if (msg.SourceEnvironment != environmentMode)
                 {
                     ack();
-                    _logger.LogError($"Ignoring message with SourceEnvironment {msg.SourceEnvironment} since this is in ENVIRONMENT_MODE {environmentMode}");
+                    _logger.LogError($"Ignoring message with SourceEnvironment {msg.SourceEnvironment} since this is running in ENVIRONMENT_MODE {environmentMode}");
                     return;
                 }
 
@@ -34,7 +34,7 @@ namespace src
                 {
                     case "Something Happened":
                         await _somethingHappenedHandler.ExecuteAsync(msg, message, ack);
-                        _logger.LogInformation($"Message processed: {message}");
+                        Console.WriteLine($"Message processed: {message}");
                         break;
                     
                     default:
