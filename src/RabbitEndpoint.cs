@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
@@ -10,11 +11,13 @@ namespace src
         private IConnection connection;
         private IModel channel;
         private readonly IRouter _router;
+        private readonly ILogger _logger;
 
 
-        public RabbitEndpoint(IRouter router)
+        public RabbitEndpoint(IRouter router, ILogger<RabbitEndpoint> logger)
         {
             _router = router;
+            _logger = logger;
         }
         public void StartListening()
         {

@@ -15,7 +15,7 @@ namespace src
             WebHost.CreateDefaultBuilder(args)
                 .ConfigureLogging((hostingContext, builder) =>
                 {
-                    builder.AddFile("/logs/rt_internal_control_service-{Date}.log");
+                    builder.AddFile("/logs/notification_service_{Date}.log");
                 })
                 .UseKestrel()
                 .UseStartup<Startup>()
