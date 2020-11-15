@@ -1,5 +1,5 @@
 # Notification Service - RabbitMQ, Sendgrid, Slack.
-The idea here is to consume events from RabbitMQ and send email via Sendgrid or add messages to Slack channel. Let's say, there are some business critical situations, when they occure, some events are triggered to a web endpoint. Those events are then stored in RabbitMQ (covered in my other repository, please check here https://github.com/mail4hafij/rabbit_event_stream). Now, in this solution we want to consume those events from RabbitMQ so that we can notify people by email and send messages in a Slack channel. 
+The idea here is to consume events from RabbitMQ and send email via Sendgrid or add messages to Slack channel. Let's say, there are some business critical situations, when they occure, some events are triggered to a web endpoint. Those events are then stored in RabbitMQ (covered in the other repository, please checkout  https://github.com/mail4hafij/rabbit_event_stream). Now, in this solution we want to consume those events from RabbitMQ so that we can notify people by email and send messages in a Slack channel.
 
 Techonology stack: Docker-compose, .Net core 2.0, C#, RabbitMQ client.
 
@@ -17,7 +17,7 @@ https://docs.microsoft.com/en-us/dotnet/standard/containerized-lifecycle-archite
 
   OR if you don't want to use docker-compose then:
 
-  2. First build it from the docker file (Dockerfile.local)
+  2. First build the notification_service from the docker file (Dockerfile.local)
   
   ``` docker build -f Dockerfile.local . -t notification_service_src ```  
 
